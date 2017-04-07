@@ -1,12 +1,14 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/article_list/article_list",
+    "pages/article/article",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "每日阅读",
     "navigationBarTextStyle":"black"
   }
 }

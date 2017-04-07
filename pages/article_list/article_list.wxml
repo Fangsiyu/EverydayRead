@@ -1,0 +1,108 @@
+
+<!--article_list.wxml-->
+<view class="container-2">
+  <view class="list-top">
+    <text>文章列表</text>
+  </view>
+  <view class="list-con">
+    <view class="article" bindtap="toArticleDetail">
+      <view class="art-l">
+        <image src="../imgs/pic.png" mode="widthFix"></image>
+      </view>
+      <view class="art-r">
+        <view class="art-title">我是标题</view>
+        <view class="art-con">内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</view>
+      </view>
+    </view>
+    <view class="article">
+      <view class="art-l">
+        <image src="../imgs/pic.png" mode="widthFix"></image>
+      </view>
+      <view class="art-r">
+        <view class="art-title">我是标题</view>
+        <view class="art-con">内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</view>
+      </view>
+    </view>
+    <view class="article">
+      <view class="art-l">
+        <image src="../imgs/pic.png" mode="widthFix"></image>
+      </view>
+      <view class="art-r">
+        <view class="art-title">我是标题</view>
+        <view class="art-con">内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</view>
+      </view>
+    </view>
+    <view class="article">
+      <view class="art-l">
+        <image src="../imgs/pic.png" mode="widthFix"></image>
+      </view>
+      <view class="art-r">
+        <view class="art-title">我是标题</view>
+        <view class="art-con">内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</view>
+      </view>
+    </view>
+    <view class="article">
+      <view class="art-l">
+        <image src="../imgs/pic.png" mode="widthFix"></image>
+      </view>
+      <view class="art-r">
+        <view class="art-title">我是标题</view>
+        <view class="art-con">内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</view>
+      </view>
+    </view>
+    <view class="article">
+      <view class="art-l">
+        <image src="../imgs/pic.png" mode="widthFix"></image>
+      </view>
+      <view class="art-r">
+        <view class="art-title">我是标题</view>
+        <view class="art-con">内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</view>
+      </view>
+    </view>
+    <view class="article">
+      <view class="art-l">
+        <image src="../imgs/pic.png" mode="widthFix"></image>
+      </view>
+      <view class="art-r">
+        <view class="art-title">我是标题</view>
+        <view class="art-con">内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</view>
+      </view>
+    </view>
+    <view class="article">
+      <view class="art-l">
+        <image src="../imgs/pic.png" mode="widthFix"></image>
+      </view>
+      <view class="art-r">
+        <view class="art-title">我是标题</view>
+        <view class="art-con">内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</view>
+      </view>
+    </view>
+    <view class="article">
+      <view class="art-l">
+        <image src="../imgs/pic.png" mode="widthFix"></image>
+      </view>
+      <view class="art-r">
+        <view class="art-title">我是标题</view>
+        <view class="art-con">内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</view>
+      </view>
+    </view>
+    <view class="article">
+      <view class="art-l">
+        <image src="../imgs/pic.png" mode="widthFix"></image>
+      </view>
+      <view class="art-r">
+        <view class="art-title">我是标题</view>
+        <view class="art-con">内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</view>
+      </view>
+    </view>
+    <view class="article">
+      <view class="art-l">
+        <image src="../imgs/pic.png" mode="widthFix"></image>
+      </view>
+      <view class="art-r">
+        <view class="art-title">我是标题</view>
+        <view class="art-con">内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介</view>
+      </view>
+    </view>
+  </view>
+</view>

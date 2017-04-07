@@ -17,5 +17,25 @@
 }
 
 .usermotto {
-  margin-top: 200px;
+  /*margin-top: 200px;*/
+}
+.logo{
+  margin:0 auto;
+}
+.logo image{
+  width: 120px;
+}
+.index-text{
+  font-size: 18px;
+  color: #707070;
+}
+.btn-index{
+  margin-top: 150px;
+  width: 100px;
+  color: #707070;
+  border: 3px solid #ccc;
+  box-shadow: 0 50px 30px -20px #ccc;
+  font-weight: bold;
+  border-radius: 50px;
+  background-color: transparent;
 }
