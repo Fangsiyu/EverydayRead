@@ -1,4 +1,5 @@
 /**index.wxss**/
+
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -16,26 +17,27 @@
   color: #aaa;
 }
 
-.usermotto {
-  /*margin-top: 200px;*/
+.logo {
+  margin: 0 auto;
 }
-.logo{
-  margin:0 auto;
-}
-.logo image{
+
+.logo image {
   width: 120px;
 }
-.index-text{
+
+.index-text {
   font-size: 18px;
   color: #707070;
 }
-.btn-index{
+
+.btn-index {
+  margin: 0 auto;
+  text-align: center;
   margin-top: 150px;
-  width: 100px;
   color: #707070;
-  border: 3px solid #ccc;
-  box-shadow: 0 50px 30px -20px #ccc;
-  font-weight: bold;
-  border-radius: 50px;
-  background-color: transparent;
+  font-size: 50rpx;
+}
+
+.btn-start {
+  text-shadow: 0 50rpx 50rpx #ccc;
 }

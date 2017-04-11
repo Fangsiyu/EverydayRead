@@ -14,11 +14,11 @@
 }
 .article{
     height: 66px;
-    margin-bottom: 15px;
+    margin: 20px 0;
 }
 .art-l{
     float: left;
-    width: 20%;
+    width: 22%;
 }
 .art-l>image{
     float: left;
@@ -26,20 +26,26 @@
 }
 .art-r{
     float: left;
-    width: 78%;
+    width: 76%;
     margin-left:2%; 
 }
 .art-title{
     font-size: 16px;
-    line-height: 18px;
+    line-height: 48rpx;
     font-weight: bold;
-    height: 18px;
+    height: 48rpx;
 }
 .art-con{
     font-size: 14px;
-    line-height: 16px;
-    height: 48px;
+    line-height: 36rpx;
+    height: 108rpx;
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
+}
+.article-more{
+    width: 100%;
+    font-size: 28rpx;
+    text-align: center;
+    text-shadow: 0 20rpx 20rpx #ccc;
 }

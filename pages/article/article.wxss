@@ -1,1 +1,35 @@
 /* pages/article/article.wxss */
+
+.atricle-title{
+    font-weight: bold;
+}
+.article-author{
+    font-size: 28rpx;
+    margin: 16rpx 0;
+}
+.article-con{
+    margin: 0;
+    font-size: 32rpx;
+}
+.article-con view{
+    text-indent: 2em;
+    line-height: 40rpx;
+}
+.article-foot{
+font-size: 28rpx;
+}
+.article-foot view{
+    background-color: transparent;
+    font-size: 28rpx;
+    color: #707070;
+    font-weight: bold;
+    margin: 20rpx;
+    padding: 20rpx;
+    text-shadow: 0 20rpx 20rpx #ccc;
+}
+.page-pre{
+    float: left;
+}
+.page-next{
+    float: right;
+}

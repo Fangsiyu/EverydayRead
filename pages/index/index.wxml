@@ -6,6 +6,8 @@
   </view>
   <view class="index-text">
     <text>{{message}}</text>
-    <button class="btn-index" bindtap="toList"> {{btnstart}} </button>
+  </view>
+  <view class="btn-index" bindtap="toList">
+    <text class="btn-start">{{btnstart}}</text>
   </view>
 </view>

@@ -14,5 +14,5 @@
   width: 100%;
   box-sizing: border-box;
   color: #707070;
-  padding: 10px 15px;
+  padding: 30rpx 30rpx;
 }
