@@ -26,16 +26,22 @@ Page({
       }
     }
   },
-  onPullDownRefresh:function(){
-    wx.showLoading({
-      title: '加载中...',
-      icon:'loading'
-    })
+  onPullDownRefresh: function () {
     setTimeout(function () {
       wx.hideLoading();
       wx.stopPullDownRefresh();
     }, 1500)
+    setTimeout(function () {
+      wx.showLoading({
+        title: '加载成功',
+        icon: 'success'
+      })
+    }, 800)
   },
+  
+  
+  
+  
   // getMore: function () {
   //   wx.showLoading({
   //     title: '加载中...',
@@ -45,12 +51,12 @@ Page({
   //     wx.hideLoading()
   //   }, 1500)
   // },
- onLoad: function (options) {
+  onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
-    wx.showLoading({
-      title: '加载中...',
-      icon: 'loading'
-    })
+    // wx.showLoading({
+    //   title: '加载中...',
+    //   icon: 'loading'
+    // })
   },
   onReady: function () {
     wx.hideLoading()
