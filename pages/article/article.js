@@ -23,6 +23,9 @@ Page({
       icon: 'loading'
     })
   },
+  onPullDownRefresh: function(){
+    wx.stopPullDownRefresh()
+  },
   onReady: function () {
     wx.hideLoading()
     // 页面渲染完成

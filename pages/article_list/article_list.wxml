@@ -95,6 +95,6 @@
         <view class="art-con">早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室。机要秘书皮彻通常毫无表情的面孔不禁露出一丝好奇和诧异。马克斯韦尔只随口道了声</view>
       </view>
     </view>
-    <view class="article-more" bindtap="getMore">点击加载更多</view>
+    <view class="article-more">下拉加载更多</view>
   </view>
 </view>

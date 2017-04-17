@@ -1,15 +1,15 @@
 /* pages/article_list/article_list.wxss */
 
 .list-top {
-  position: fixed;
-  top: 0;
+  /*position: fixed;
+  top: 0;*/
   width: 100%;
   line-height: 40px;
   background-color: #fff;
 }
 
 .list-con {
-  margin-top: 40px;
+  /*margin-top: 40px;*/
   width: 100%;  
 }
 .article{

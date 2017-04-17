@@ -26,15 +26,25 @@ Page({
       }
     }
   },
-  getMore: function () {
+  onPullDownRefresh:function(){
     wx.showLoading({
       title: '加载中...',
       icon:'loading'
     })
     setTimeout(function () {
-      wx.hideLoading()
+      wx.hideLoading();
+      wx.stopPullDownRefresh();
     }, 1500)
   },
+  // getMore: function () {
+  //   wx.showLoading({
+  //     title: '加载中...',
+  //     icon:'loading'
+  //   })
+  //   setTimeout(function () {
+  //     wx.hideLoading()
+  //   }, 1500)
+  // },
  onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
     wx.showLoading({

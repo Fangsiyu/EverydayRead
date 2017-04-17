@@ -30,5 +30,8 @@ Page({
     wx.navigateTo({
       url: '../article_list/article_list'
     })
+  },
+  onPullDownRefresh: function(){
+    wx.stopPullDownRefresh()
   }
 })
