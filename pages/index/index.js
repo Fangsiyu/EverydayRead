@@ -11,7 +11,6 @@ Page({
       title: '每日阅读One',
       path: '/pages/index/index',
       success: function (res) {
-
       }
     }
   },

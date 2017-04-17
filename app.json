@@ -7,7 +7,7 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#eeeeee",
     "navigationBarTitleText": "每日阅读",
     "navigationBarTextStyle":"black",
     "enablePullDownRefresh": "true",
