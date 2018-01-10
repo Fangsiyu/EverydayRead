@@ -1,0 +1,18 @@
+<!--pages/article/article_detail.wxml-->
+<view class="container-2">
+  <view class="atricle-title">
+    <text>证券经纪人的浪漫故事</text>
+  </view>
+  <view class="article-author">
+    <text>欧.亨利</text>
+    <text> 2017-04-25</text>
+  </view>
+  <view class="article-con">
+    <rich-text>富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本富文本</rich-text>
+    
+  </view>
+  <view class="article-foot">
+    <view class="page-pre">上一篇</view>
+    <view class="page-next" bindtap="toNextPage">下一篇</view>
+  </view>
+</view>

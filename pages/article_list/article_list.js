@@ -3,7 +3,7 @@ Page({
   data: {},
   toArticleDetail: function (event) {
     wx.navigateTo({
-      url: '../article/article',
+      url: '../article_list/article_detail/article_detail',
       success: function (res) {
         // success
       },

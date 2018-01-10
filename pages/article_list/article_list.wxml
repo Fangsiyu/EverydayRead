@@ -1,91 +1,9 @@
-
 <!--article_list.wxml-->
 <view class="container-2">
   <view class="list-top">
     <text>文章列表</text>
   </view>
   <view class="list-con">
-    <view class="article" bindtap="toArticleDetail">
-      <view class="art-l">
-        <image src="../imgs/logo.png" mode="widthFix"></image>
-      </view>
-      <view class="art-r">
-        <view class="art-title">证券经纪人的浪漫故事</view>
-        <view class="art-con">早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室。机要秘书皮彻通常毫无表情的面孔不禁露出一丝好奇和诧异。马克斯韦尔只随口道了声</view>
-      </view>
-    </view>
-    <view class="article" bindtap="toArticleDetail">
-      <view class="art-l">
-        <image src="../imgs/logo.png" mode="widthFix"></image>
-      </view>
-      <view class="art-r">
-        <view class="art-title">证券经纪人的浪漫故事</view>
-        <view class="art-con">早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室。机要秘书皮彻通常毫无表情的面孔不禁露出一丝好奇和诧异。马克斯韦尔只随口道了声</view>
-      </view>
-    </view>
-    <view class="article" bindtap="toArticleDetail">
-      <view class="art-l">
-        <image src="../imgs/logo.png" mode="widthFix"></image>
-      </view>
-      <view class="art-r">
-        <view class="art-title">证券经纪人的浪漫故事</view>
-        <view class="art-con">早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室。机要秘书皮彻通常毫无表情的面孔不禁露出一丝好奇和诧异。马克斯韦尔只随口道了声</view>
-      </view>
-    </view>
-    <view class="article" bindtap="toArticleDetail">
-      <view class="art-l">
-        <image src="../imgs/logo.png" mode="widthFix"></image>
-      </view>
-      <view class="art-r">
-        <view class="art-title">证券经纪人的浪漫故事</view>
-        <view class="art-con">早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室。机要秘书皮彻通常毫无表情的面孔不禁露出一丝好奇和诧异。马克斯韦尔只随口道了声</view>
-      </view>
-    </view>
-    <view class="article" bindtap="toArticleDetail">
-      <view class="art-l">
-        <image src="../imgs/logo.png" mode="widthFix"></image>
-      </view>
-      <view class="art-r">
-        <view class="art-title">证券经纪人的浪漫故事</view>
-        <view class="art-con">早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室。机要秘书皮彻通常毫无表情的面孔不禁露出一丝好奇和诧异。马克斯韦尔只随口道了声</view>
-      </view>
-    </view>
-    <view class="article" bindtap="toArticleDetail">
-      <view class="art-l">
-        <image src="../imgs/logo.png" mode="widthFix"></image>
-      </view>
-      <view class="art-r">
-        <view class="art-title">证券经纪人的浪漫故事</view>
-        <view class="art-con">早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室。机要秘书皮彻通常毫无表情的面孔不禁露出一丝好奇和诧异。马克斯韦尔只随口道了声</view>
-      </view>
-    </view>
-    <view class="article" bindtap="toArticleDetail">
-      <view class="art-l">
-        <image src="../imgs/logo.png" mode="widthFix"></image>
-      </view>
-      <view class="art-r">
-        <view class="art-title">证券经纪人的浪漫故事</view>
-        <view class="art-con">早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室。机要秘书皮彻通常毫无表情的面孔不禁露出一丝好奇和诧异。马克斯韦尔只随口道了声</view>
-      </view>
-    </view>
-    <view class="article" bindtap="toArticleDetail">
-      <view class="art-l">
-        <image src="../imgs/logo.png" mode="widthFix"></image>
-      </view>
-      <view class="art-r">
-        <view class="art-title">证券经纪人的浪漫故事</view>
-        <view class="art-con">早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室。机要秘书皮彻通常毫无表情的面孔不禁露出一丝好奇和诧异。马克斯韦尔只随口道了声</view>
-      </view>
-    </view>
-    <view class="article" bindtap="toArticleDetail">
-      <view class="art-l">
-        <image src="../imgs/logo.png" mode="widthFix"></image>
-      </view>
-      <view class="art-r">
-        <view class="art-title">证券经纪人的浪漫故事</view>
-        <view class="art-con">早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室。机要秘书皮彻通常毫无表情的面孔不禁露出一丝好奇和诧异。马克斯韦尔只随口道了声</view>
-      </view>
-    </view>
     <view class="article" bindtap="toArticleDetail">
       <view class="art-l">
         <image src="../imgs/logo.png" mode="widthFix"></image>

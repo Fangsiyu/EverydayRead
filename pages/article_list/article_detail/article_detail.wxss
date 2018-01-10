@@ -1,5 +1,4 @@
-/* pages/article/article.wxss */
-
+/* pages/article/article_detail.wxss */
 .atricle-title{
     font-weight: bold;
 }
