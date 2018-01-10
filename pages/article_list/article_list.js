@@ -1,18 +1,55 @@
 // pages/article_list/article_list.js
 Page({
-  data: {},
+  data: {
+    list:[
+      {
+        id:'1',
+        title: '证券经纪人的浪漫故事1',
+        imgUrl: '../imgs/logo.png',
+        content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
+      },
+      {
+        id: '2',
+        title: '证券经纪人的浪漫故事2',
+        imgUrl: '../imgs/logo.png',
+        content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
+      },
+      {
+        id: '3',
+        title: '证券经纪人的浪漫故事3',
+        imgUrl: '../imgs/logo.png',
+        content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
+      },
+      {
+        id: '4',
+        title: '证券经纪人的浪漫故事4',
+        imgUrl: '../imgs/logo.png',
+        content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
+      },
+      {
+        id: '5',
+        title: '证券经纪人的浪漫故事5',
+        imgUrl: '../imgs/logo.png',
+        content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
+      },
+      {
+        id: '6',
+        title: '证券经纪人的浪漫故事6',
+        imgUrl: '../imgs/logo.png',
+        content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
+      },
+      {
+        id: '7',
+        title: '证券经纪人的浪漫故事7',
+        imgUrl: '../imgs/logo.png',
+        content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
+      }
+    ]
+    
+  },
   toArticleDetail: function (event) {
     wx.navigateTo({
-      url: '../article_list/article_detail/article_detail',
-      success: function (res) {
-        // success
-      },
-      fail: function (res) {
-        // fail
-      },
-      complete: function (res) {
-        // complete
-      }
+      url: '../article_list/article_detail/article_detail?id' + event.currentTarget.id,
     })
   },
   onPullDownRefresh: function () {

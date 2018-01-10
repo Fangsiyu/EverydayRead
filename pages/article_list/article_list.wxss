@@ -14,7 +14,7 @@
 }
 .article{
     height: 66px;
-    margin: 20px 0;
+    margin-top: 30rpx;
 }
 .art-l{
     float: left;
@@ -44,6 +44,7 @@
     word-wrap: break-word;
 }
 .article-more{
+    margin-top: 50rpx;
     width: 100%;
     font-size: 28rpx;
     text-align: center;

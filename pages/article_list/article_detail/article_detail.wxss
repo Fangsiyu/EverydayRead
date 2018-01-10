@@ -6,6 +6,9 @@
     font-size: 28rpx;
     margin: 16rpx 0;
 }
+.article-author text{
+    margin-right: 10rpx;
+}
 .article-con{
     margin: 0;
     font-size: 32rpx;
