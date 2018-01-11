@@ -5,43 +5,43 @@ Page({
       {
         id:'1',
         title: '证券经纪人的浪漫故事1',
-        imgUrl: '../imgs/logo.png',
+        imgUrl: 'http://ico.58pic.com/iconset01/Qetto-icons/gif/154552.gif',
         content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
       },
       {
         id: '2',
         title: '证券经纪人的浪漫故事2',
-        imgUrl: '../imgs/logo.png',
+        imgUrl: 'http://ico.58pic.com/iconset01/Qetto-icons/gif/154555.gif',
         content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
       },
       {
         id: '3',
         title: '证券经纪人的浪漫故事3',
-        imgUrl: '../imgs/logo.png',
+        imgUrl: 'http://ico.58pic.com/iconset01/Qetto-icons/gif/154553.gif',
         content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
       },
       {
         id: '4',
         title: '证券经纪人的浪漫故事4',
-        imgUrl: '../imgs/logo.png',
+        imgUrl: 'http://ico.58pic.com/iconset01/Qetto-icons/gif/154554.gif',
         content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
       },
       {
         id: '5',
         title: '证券经纪人的浪漫故事5',
-        imgUrl: '../imgs/logo.png',
+        imgUrl: 'http://ico.58pic.com/iconset01/Qetto-icons/gif/154556.gif',
         content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
       },
       {
         id: '6',
         title: '证券经纪人的浪漫故事6',
-        imgUrl: '../imgs/logo.png',
+        imgUrl: 'http://ico.58pic.com/iconset01/Qetto-icons/gif/154526.gif',
         content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
       },
       {
         id: '7',
         title: '证券经纪人的浪漫故事7',
-        imgUrl: '../imgs/logo.png',
+        imgUrl: 'http://ico.58pic.com/iconset01/Qetto-icons/gif/154558.gif',
         content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
       }
     ]
@@ -74,20 +74,7 @@ Page({
         icon: 'success'
       })
     }, 800)
-  },
-  
-  
-  
-  
-  // getMore: function () {
-  //   wx.showLoading({
-  //     title: '加载中...',
-  //     icon:'loading'
-  //   })
-  //   setTimeout(function () {
-  //     wx.hideLoading()
-  //   }, 1500)
-  // },
+  }, 
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
     // wx.showLoading({

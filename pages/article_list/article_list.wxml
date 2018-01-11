@@ -1,8 +1,8 @@
 <!--article_list.wxml-->
 <view class="container-2">
-  <view class="list-top">
+  <!-- <view class="list-top">
     <text>文章列表</text>
-  </view>
+  </view> -->
   <view class="list-con">
     <view class="article" wx:for="{{list}}" wx:key="id" bindtap="toArticleDetail">
       <view class="art-l">

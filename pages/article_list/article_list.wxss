@@ -14,7 +14,7 @@
 }
 .article{
     height: 66px;
-    margin-top: 30rpx;
+    margin-bottom: 50rpx;
 }
 .art-l{
     float: left;
