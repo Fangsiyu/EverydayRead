@@ -1,4 +1,5 @@
 // pages/article/article_detail.js
+var app = getApp();
 Page({
 
   /**
@@ -23,10 +24,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options);
     wx.showLoading({
       title: '加载中...',
       icon: 'loading'
+    });
+    this.setData({
+      title: app.globalData.articleTitle
     })
   },
 
@@ -34,7 +37,8 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    wx.hideLoading()
+    wx.hideLoading();
+
   },
 
   /**

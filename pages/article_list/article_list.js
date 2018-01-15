@@ -1,55 +1,18 @@
 // pages/article_list/article_list.js
+var app = getApp();
 Page({
   data: {
-    list:[
-      {
-        id:'1',
-        title: '证券经纪人的浪漫故事1',
-        imgUrl: 'http://ico.58pic.com/iconset01/Qetto-icons/gif/154552.gif',
-        content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
-      },
-      {
-        id: '2',
-        title: '证券经纪人的浪漫故事2',
-        imgUrl: 'http://ico.58pic.com/iconset01/Qetto-icons/gif/154555.gif',
-        content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
-      },
-      {
-        id: '3',
-        title: '证券经纪人的浪漫故事3',
-        imgUrl: 'http://ico.58pic.com/iconset01/Qetto-icons/gif/154553.gif',
-        content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
-      },
-      {
-        id: '4',
-        title: '证券经纪人的浪漫故事4',
-        imgUrl: 'http://ico.58pic.com/iconset01/Qetto-icons/gif/154554.gif',
-        content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
-      },
-      {
-        id: '5',
-        title: '证券经纪人的浪漫故事5',
-        imgUrl: 'http://ico.58pic.com/iconset01/Qetto-icons/gif/154556.gif',
-        content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
-      },
-      {
-        id: '6',
-        title: '证券经纪人的浪漫故事6',
-        imgUrl: 'http://ico.58pic.com/iconset01/Qetto-icons/gif/154526.gif',
-        content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
-      },
-      {
-        id: '7',
-        title: '证券经纪人的浪漫故事7',
-        imgUrl: 'http://ico.58pic.com/iconset01/Qetto-icons/gif/154558.gif',
-        content: '早上9点半，证券经纪人哈维·马克斯韦尔在年轻女速记员的陪同下，步履轻快地来到办公室...'
-      }
-    ]
-    
+    list: app.globalData.list
   },
+  //点击跳转详情
   toArticleDetail: function (event) {
+    console.log(event.currentTarget.dataset);
+    console.log(app.globalData.articleTitle); 
+    app.globalData.articleId = event.currentTarget.dataset.id;
+    app.globalData.articleTitle = event.currentTarget.dataset.title;
+    console.log(app.globalData.articleTitle);
     wx.navigateTo({
-      url: '../article_list/article_detail/article_detail?id' + event.currentTarget.id,
+      url: '../article_list/article_detail/article_detail?id' + event.currentTarget.dataset.id,
     })
   },
   onPullDownRefresh: function () {
@@ -64,23 +27,27 @@ Page({
     }
   },
   onPullDownRefresh: function () {
-    setTimeout(function () {
-      wx.hideLoading();
-      wx.stopPullDownRefresh();
-    }, 1500)
-    setTimeout(function () {
-      wx.showLoading({
-        title: '加载成功',
-        icon: 'success'
-      })
-    }, 800)
+    wx.showLoading({
+        title: '加载中...',
+    },1000)
+    getList(this);
+    // setTimeout(function () {      
+    //   wx.hideLoading();
+    //   wx.stopPullDownRefresh();
+    // }, 1500)
+    // setTimeout(function () {
+    //   wx.showLoading({
+    //     title: '加载成功',
+    //     icon: 'success'
+    //   })
+    // }, 1500)
   }, 
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
-    // wx.showLoading({
-    //   title: '加载中...',
-    //   icon: 'loading'
-    // })
+    wx.showLoading({
+      title: '加载中...',
+      icon: 'loading'
+    });    
   },
   onReady: function () {
     wx.hideLoading()
@@ -94,5 +61,31 @@ Page({
   },
   onUnload: function () {
     // 页面关闭
+  },
+  //底部加载新文章
+  onReachBottom:function(){
+    if(pageNum < 6){
+      getList(this);
+    } else {
+      app.globalData.pageMore = true;
+      console.log(app.globalData.pageMore);
+      wx.showToast({
+        title: '没有更多文章了',
+      })
+    }
   }
 })
+var pageNum = 1;
+var getList = function(that){
+    for (var i = 0; i < app.globalData.list.length; i++) {
+      that.data.list.push(app.globalData.list[i]);
+    };
+    that.setData({
+      list: that.data.list
+    });
+    setTimeout(function () {
+      wx.hideLoading();
+    }, 1000);
+    pageNum++;
+    console.log(pageNum);
+}

@@ -4,7 +4,7 @@
     <text>文章列表</text>
   </view> -->
   <view class="list-con">
-    <view class="article" wx:for="{{list}}" wx:key="id" bindtap="toArticleDetail">
+    <view class="article" data-id="{{item.id}}" data-title="{{item.title}}" wx:for="{{list}}" wx:key="id" bindtap="toArticleDetail">
       <view class="art-l">
         <image src="{{item.imgUrl}}" mode="widthFix"></image>
       </view>
@@ -13,6 +13,6 @@
         <view class="art-con">{{item.content}}</view>
       </view>
     </view>
-    <view class="article-more">已没有更多文章</view>
+    <view wx:if="{{pageMore}}" class="article-more">已没有更多文章</view> 
   </view>
 </view>
