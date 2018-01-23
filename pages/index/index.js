@@ -1,8 +1,11 @@
 //index.js
+var app = getApp();
 Page({
   data: {
     message: '「让阅读成为一种习惯」',
     btnstart: '讀',
+    userImg: '../imgs/user.png',
+    userName: app.globalData,
     imgurl: '../imgs/logo.png'
   },
   onShareAppMessage: function () {

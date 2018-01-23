@@ -1,13 +1,16 @@
-
 <!--index.wxml-->
 <view class="container">
-  <view class="logo">
-    <image src="{{imgurl}}" mode="aspectFit"></image>
-  </view>
-  <view class="index-text">
-    <text>{{message}}</text>
-  </view>
-  <view class="btn-index" bindtap="toList">
-    <text class="btn-start">{{btnstart}}</text>
-  </view>
+    <!-- <view class="logo">
+        <image src="{{imgurl}}" mode="aspectFit"></image>
+    </view> -->
+    <view class="user-mes">
+        <image src="{{userImg}}"></image>
+        <view>{{userName}}</view>
+    </view>
+    <view class="index-text">
+        <text>{{message}}</text>
+    </view>    
+    <view class="btn-index" bindtap="toList">
+        <text class="btn-start">{{btnstart}}</text>
+    </view>
 </view>

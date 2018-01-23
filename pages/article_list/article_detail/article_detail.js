@@ -1,15 +1,12 @@
 // pages/article/article_detail.js
 var app = getApp();
 Page({
-
-  /**
-   * 页面的初始数据
-   */
+  //页面的初始数据
   data: {
     title: '加载中...',
     author: '加载中...',
     createdTime:'加载中...',
-    imgUrl: '加载中...',
+    imgUrl: '../../imgs/logo.png',
     content: '加载中...'
   },
   //下一页
