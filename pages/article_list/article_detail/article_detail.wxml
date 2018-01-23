@@ -8,6 +8,7 @@
     <text>{{createdTime}}</text>
   </view>
   <view class="article-con">
+  <image src="{{imgUrl}}" mode='aspectFit'></image>
     <rich-text>{{content}}</rich-text>    
   </view>
   <view class="article-foot">

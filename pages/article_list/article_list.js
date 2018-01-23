@@ -2,17 +2,13 @@
 var app = getApp();
 Page({
   data: {
-    list: app.globalData.list
+    list: app.globalData.list,
+    pageMore: false
   },
   //点击跳转详情
   toArticleDetail: function (event) {
-    console.log(event.currentTarget.dataset);
-    console.log(app.globalData.articleTitle); 
-    app.globalData.articleId = event.currentTarget.dataset.id;
-    app.globalData.articleTitle = event.currentTarget.dataset.title;
-    console.log(app.globalData.articleTitle);
     wx.navigateTo({
-      url: '../article_list/article_detail/article_detail?id' + event.currentTarget.dataset.id,
+      url: '../article_list/article_detail/article_detail?id=' + event.currentTarget.dataset.id + '&title=' + event.currentTarget.dataset.title + '&imgUrl=' + event.currentTarget.dataset.url + '&content=' + event.currentTarget.dataset.content,
     })
   },
   onPullDownRefresh: function () {
@@ -28,26 +24,16 @@ Page({
   },
   onPullDownRefresh: function () {
     wx.showLoading({
-        title: '加载中...',
-    },1000)
+      title: '加载中...',
+    }, 1000)
     getList(this);
-    // setTimeout(function () {      
-    //   wx.hideLoading();
-    //   wx.stopPullDownRefresh();
-    // }, 1500)
-    // setTimeout(function () {
-    //   wx.showLoading({
-    //     title: '加载成功',
-    //     icon: 'success'
-    //   })
-    // }, 1500)
-  }, 
+  },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
     wx.showLoading({
       title: '加载中...',
       icon: 'loading'
-    });    
+    });
   },
   onReady: function () {
     wx.hideLoading()
@@ -63,11 +49,13 @@ Page({
     // 页面关闭
   },
   //底部加载新文章
-  onReachBottom:function(){
-    if(pageNum < 6){
+  onReachBottom: function () {
+    if (pageNum < 6) {
       getList(this);
     } else {
-      app.globalData.pageMore = true;
+      this.setData({
+        pageMore: true
+      });
       console.log(app.globalData.pageMore);
       wx.showToast({
         title: '没有更多文章了',
@@ -76,16 +64,18 @@ Page({
   }
 })
 var pageNum = 1;
-var getList = function(that){
-    for (var i = 0; i < app.globalData.list.length; i++) {
-      that.data.list.push(app.globalData.list[i]);
-    };
-    that.setData({
-      list: that.data.list
-    });
-    setTimeout(function () {
-      wx.hideLoading();
-    }, 1000);
-    pageNum++;
-    console.log(pageNum);
+var getList = function (that) {
+  for (var i = 0; i < app.globalData.list.length; i++) {
+    that.data.list.push(app.globalData.list[i]);
+  };
+  //添加新数据
+  that.setData({
+    list: that.data.list
+  });
+  //隐藏加载框
+  setTimeout(function () {
+    wx.hideLoading();
+  }, 1000);
+  pageNum++;
+  console.log(pageNum);
 }

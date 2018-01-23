@@ -9,7 +9,8 @@ Page({
     title: '加载中...',
     author: '加载中...',
     createdTime:'加载中...',
-    content: '加载中...加载中...加载中...加载中...加载中...加载中...加载中...加载中...加载中...加载中...加载中...加载中...'
+    imgUrl: '加载中...',
+    content: '加载中...'
   },
   //下一页
   toNextPage: function () {
@@ -28,8 +29,11 @@ Page({
       title: '加载中...',
       icon: 'loading'
     });
+    console.log(options);
     this.setData({
-      title: app.globalData.articleTitle
+      title: options.title,
+      imgUrl: options.imgUrl,
+      content: options.content,
     })
   },
 
