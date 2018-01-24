@@ -22,7 +22,7 @@ Page({
     wx.showLoading({
       title: '加载中...',
       icon: 'loading'
-    })
+    });
   },
   onReady: function () {
     wx.hideLoading()
@@ -35,5 +35,5 @@ Page({
   },
   onPullDownRefresh: function(){
     wx.stopPullDownRefresh()
-  }
+  },  
 })

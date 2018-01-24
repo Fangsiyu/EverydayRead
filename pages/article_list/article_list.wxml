@@ -4,7 +4,7 @@
     <text>文章列表</text>
   </view> -->
   <view class="list-con">
-    <view class="article" data-id="{{item.id}}" data-title="{{item.title}}" data-url="{{item.imgUrl}}" data-content="{{item.content}}" wx:for="{{list}}" wx:key="id" bindtap="toArticleDetail">
+    <view class="article" hover-class='tapClass' data-id="{{item.id}}" data-title="{{item.title}}" data-url="{{item.imgUrl}}" data-content="{{item.content}}" wx:for="{{list}}" wx:key="id" bindtap="toArticleDetail">
       <view class="art-l">
         <image src="{{item.imgUrl}}" mode="widthFix"></image>
       </view>

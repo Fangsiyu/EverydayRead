@@ -4,20 +4,14 @@ App({
         //登录
         wx.login({
             success: function (res) {
-                console.log(res);
                 //获取用户信息
                 wx.getUserInfo({
                     success: function (res) {
-                        console.table(res);
-                        var userInfo = res.userInfo
-                        var nickName = userInfo.nickName
-                        var avatarUrl = userInfo.avatarUrl
-                        var gender = userInfo.gender //性别 0：未知、1：男、2：女
-                        var province = userInfo.province
-                        var city = userInfo.city
-                        var country = userInfo.country
+                        wx.setStorageSync('dayUser', res.userInfo);
                     }
-                })
+                });
+
+                console.log(wx.getStorageSync('dayUser'));
             }
         });
     },

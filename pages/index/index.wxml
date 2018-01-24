@@ -10,7 +10,7 @@
     <view class="index-text">
         <text>{{message}}</text>
     </view>    
-    <view class="btn-index" bindtap="toList">
+    <view class="btn-index" bindtap="toList" hover-class='tapClass'>
         <text class="btn-start">{{btnstart}}</text>
     </view>
 </view>
