@@ -51,11 +51,10 @@
 }
 
 .user-mes image {
-    width: 80rpx;
-    height: 80rpx;
-    padding: 10rpx;
-    border: 2px solid #ccc;
+    width: 120rpx;
+    height: 120rpx;
     border-radius: 50%;
+    box-shadow: 0 0 50rpx #ccc;
 }
 .user-mes view {
     margin-top: 20rpx;
