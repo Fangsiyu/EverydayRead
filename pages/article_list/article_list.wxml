@@ -1,20 +1,20 @@
 <!--article_list.wxml-->
 <view class="container-2">
-  <!-- <view class="list-top">
+    <!-- <view class="list-top">
     <text>文章列表</text>
   </view> -->
-  <view class="list-con">
-    <view class="article" hover-class='tapClass' data-id="{{item.id}}" data-title="{{item.title}}" data-url="{{item.imgUrl}}" data-content="{{item.content}}" wx:for="{{list}}" wx:key="id" bindtap="toArticleDetail">
-      <view class="art-l">
-        <image src="{{item.imgUrl}}" mode="widthFix"></image>
-      </view>
-      <view class="art-r">
-        <view class="art-title">{{item.title}}</view>
-        <view class="art-con">{{item.content}}</view>
-      </view>
+    <view class="list-con">
+        <view class="article" hover-class='tapClass' data-id="{{item.id}}" data-title="{{item.title}}" data-url="{{item.imgUrl}}" data-content="{{item.content}}" wx:for="{{list}}" wx:key="id" bindtap="toArticleDetail">
+            <!-- <view class="art-l">
+                <image src="{{item.imgUrl}}" mode="widthFix"></image>
+            </view> -->
+            <view class="art-r">
+                <view class="art-title">{{item.title}}</view>
+                <view class="art-con">{{item.content}}</view>
+            </view>
+        </view>
     </view>
-  </view>
-  <block wx:if="{{pageMore}}">
-    <view class="article-more">已没有更多文章</view>
-  </block>
+    <block wx:if="{{pageMore}}">
+        <view class="article-more">已没有更多文章</view>
+    </block>
 </view>

@@ -2,13 +2,13 @@
 var app = getApp();
 Page({
     data: {
-        list: app.globalData.list,
+        list: [],
         pageMore: false
     },
     //点击跳转详情
     toArticleDetail: function (event) {
         wx.navigateTo({
-            url: '../article_list/article_detail/article_detail?id=' + event.currentTarget.dataset.id + '&title=' + event.currentTarget.dataset.title + '&imgUrl=' + event.currentTarget.dataset.url + '&content=' + event.currentTarget.dataset.content,
+            url: '../article_list/article_detail/article_detail?id=' + event.currentTarget.dataset.id + '&title=' + event.currentTarget.dataset.title + '&createdTime=' + event.currentTarget.dataset.createdTime + '&content=' + event.currentTarget.dataset.content,
         })
     },
     onPullDownRefresh: function () {
@@ -26,7 +26,6 @@ Page({
         wx.showLoading({
             title: '加载中...',
         }, 1000)
-        getList(this);
     },
     onLoad: function (options) {
         // 页面初始化 options为页面跳转所带来的参数
@@ -34,9 +33,13 @@ Page({
             title: '加载中...',
             icon: 'loading'
         });
+        console.log(this);
+        getList(this);
+        wx.hideLoading();
+        console.log(this.data.list);
     },
     onReady: function () {
-        wx.hideLoading()
+        // wx.hideLoading()
         // 页面渲染完成
     },
     onShow: function () {
@@ -50,7 +53,7 @@ Page({
     },
     //底部加载新文章
     onReachBottom: function () {
-        if (pageNum < 6) {
+        if (!this.data.pageMore) {
             getList(this);
         } else {
             this.setData({
@@ -58,23 +61,55 @@ Page({
             });
             wx.showToast({
                 title: '没有更多文章了',
-            })
+            });
         }
     }
 })
-var pageNum = 1;
-var getList = function (that) {
-    for (var i = 0; i < app.globalData.list.length; i++) {
-        that.data.list.push(app.globalData.list[i]);
-    };
-    //添加新数据
-    that.setData({
-        list: that.data.list
-    });
-    //隐藏加载框
-    setTimeout(function () {
-        wx.hideLoading();
-    }, 1000);
-    pageNum++;
-    console.log(pageNum);
+var offset = 1, limit = 10; //设置页码，每页数量
+var getList = function (that) {   //获取文章列表
+    wx.request({
+        url: app.globalData.proServer + '/api/articles?offset=' + offset + '&limit=' + limit,
+        success: res => {
+            if (res.statusCode == 200) {
+                if (res.data.code == '000000') {
+                    // var oldList = that.data.list;
+                    for (var i = 0; i < res.data.data.totals; i++) {
+                        // console.log(res.data.data.data[i]);
+                        res.data.data.data[i].createdTime = 
+                        that.data.list.push(res.data.data.data[i]);
+                    };
+                    that.setData({
+                        list: that.data.list
+                    });
+                    // 判断是否还有数据
+                    if (res.data.data.totals == limit) {
+                        offset++;
+                    } else {
+                        that.setData({
+                            pageMore: true
+                        })
+                    }
+                } else {
+                    wx.showModal({
+                        title: '友情提醒',
+                        content: res.data.message,
+                    })
+                }
+            } else {
+                wx.showToast({
+                    title: '服务器出问题啦',
+                })
+            }
+        },
+        fail: res => {
+            wx.showToast({
+                title: '服务器出问题啦',
+            })
+        }
+    })
+}
+
+// 时间戳转换日期
+var changeDate = function(time){
+    
 }

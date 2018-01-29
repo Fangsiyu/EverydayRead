@@ -4,8 +4,9 @@ Page({
     data: {
         message: '「让阅读成为一种习惯」',
         btnstart: '讀',
+        userInfo: {},
+        appName: app.globalData.appName,
         userImg: app.globalData.userImg,
-        userName: app.globalDatauserName
     },
     onShareAppMessage: function () {
         // wx.showShareMenu();
@@ -21,11 +22,21 @@ Page({
             title: '加载中...',
             icon: 'loading'
         });
-        var dayUser = wx.getStorageSync('dayUser');
-        this.setData({
-            userImg: dayUser.avatarUrl,
-            userName: dayUser.nickName,
-        });
+        // 防止网络慢，从新获取
+        wx.getUserInfo({
+            success: res => {
+                this.setData({
+                    userInfo: res.userInfo
+                })
+            }
+        })
+        // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+        // 所以此处加入 callback 以防止这种情况
+        // app.userInfoReadyCallback = res => {
+        //     this.setData({
+        //         userInfo: res.userInfo
+        //     })
+        // }
     },
     onReady: function () {
         wx.hideLoading()

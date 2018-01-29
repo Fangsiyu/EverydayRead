@@ -8,11 +8,11 @@
     <text>{{createdTime}}</text>
   </view>
   <view class="article-con">
-  <image src="{{imgUrl}}" mode='aspectFit'></image>
+  <!-- <image src="{{imgUrl}}" mode='aspectFit'></image> -->
     <rich-text>{{content}}</rich-text>    
   </view>
-  <view class="article-foot">
+  <!-- <view class="article-foot">
     <view class="page-pre">上一篇</view>
     <view class="page-next" bindtap="toNextPage">下一篇</view>
-  </view>
+  </view> -->
 </view>

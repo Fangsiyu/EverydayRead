@@ -4,12 +4,14 @@
         <image src="{{imgurl}}" mode="aspectFit"></image>
     </view> -->
     <view class="user-mes">
-        <image mode='aspectFill' src="{{userImg}}"></image>
-        <view>{{userName}}</view>
+        <image wx:if="{{userInfo}}" mode='aspectFill' src="{{userInfo.avatarUrl}}"></image>
+        <image wx:else mode='aspectFill' src="{{userImg}}"></image>
+        <view wx:if="{{userInfo}}">{{userInfo.nickName}}</view>
+        <view wx:else>{{appName}}</view>
     </view>
     <view class="index-text">
         <text>{{message}}</text>
-    </view>    
+    </view>
     <view class="btn-index" bindtap="toList" hover-class='tapClass'>
         <text class="btn-start">{{btnstart}}</text>
     </view>
