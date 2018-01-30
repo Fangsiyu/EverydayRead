@@ -65,21 +65,21 @@ Page({
         }
     }
 })
-var offset = 1, limit = 10; //设置页码，每页数量
+var offset = 1, limit = 10, oldList=[]; //设置页码，每页数量
 var getList = function (that) {   //获取文章列表
+if(!that.data.pageMore){ //判断还有没有数据来决定请求与否
     wx.request({
         url: app.globalData.proServer + '/api/articles?offset=' + offset + '&limit=' + limit,
         success: res => {
             if (res.statusCode == 200) {
                 if (res.data.code == '000000') {
-                    // var oldList = that.data.list;
+                    oldList = that.data.list;
                     for (var i = 0; i < res.data.data.totals; i++) {
                         // console.log(res.data.data.data[i]);
-                        res.data.data.data[i].createdTime = 
-                        that.data.list.push(res.data.data.data[i]);
+                            oldList.push(res.data.data.data[i]);
                     };
                     that.setData({
-                        list: that.data.list
+                        list: oldList
                     });
                     // 判断是否还有数据
                     if (res.data.data.totals == limit) {
@@ -107,6 +107,12 @@ var getList = function (that) {   //获取文章列表
             })
         }
     })
+}else{
+    wx.showToast({
+        title: '没有更多文章',
+    })
+}
+    
 }
 
 // 时间戳转换日期
